@@ -17,7 +17,7 @@ Welcome to the Review Analyser & Discount Bot repository! This project provides 
 ![Happy 01](results/Happy_1.png)
 ![Happy 02](results/Happy_2.png)
 ![Happy 03](results/Happy_3.png)
-### Review Results - Customer is Sad/Unhappy/unsatisfied
+### Review Results - Customer is Sad/Unhappy/Unsatisfied
 ![Sad 01](results/Sad_1.png)
 ![Sad 02](results/Sad_2.png)
 ![Sad 03](results/Sad_3.png)
