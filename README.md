@@ -5,12 +5,22 @@
 Welcome to the Review Analyser & Discount Bot repository! This project provides a sentiment analysis bot powered by OpenAI's GPT-4. It analyzes user reviews and responds with appropriate messages based on the sentiment detected.
 
 ## Table of Contents
-
+- [Bot Screenshots](#bot-screenshots)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Bot Screenshots
+### Review Results - Customer is Happy/Good/Satisfied
+![Happy 01](results/Happy_1.png)
+![Happy 02](results/Happy_2.png)
+![Happy 03](results/Happy_3.png)
+### Review Results - Customer is Sad/Unhappy/unsatisfied
+![Sad 01](results/Sad_1.png)
+![Sad 02](results/Sad_2.png)
+![Sad 03](results/Sad_3.png)
 
 ## Features
 
@@ -25,14 +35,14 @@ To get started with the Review Analyser & Discount Bot, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/review-analyser-bot.git
+    git clone https://github.com/AyushMehta1702/Discount-Bot.git
     ```
 
 2. Install dependencies:
 
     ```bash
-    cd review-analyser-bot
-    # Add instructions for installing dependencies if needed
+    cd Discount-Bot
+    pip install -r requirements.txt
     ```
 
 3. Set up OpenAI API key:
@@ -43,13 +53,6 @@ To get started with the Review Analyser & Discount Bot, follow these steps:
         ```env
         OPENAI_API_KEY=your-api-key
         ```
-
-4. Run the application:
-
-    ```bash
-    # Add instructions for running the application
-    ```
-
 ## Usage
 
 1. Open the web interface in your browser.
