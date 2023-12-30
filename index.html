@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review Analyser Bot</title>
+     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #008080; /* Dark Teal */
+        }
+
+        p {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #008080; /* Dark Teal */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005656; /* Slightly darker teal on hover */
+        }
+
+        #deal {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #008080; /* Dark Teal */
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Review Analyser Bot</h1>
+    <p>Thanks for shopping with us, let us know your experience!</p>
+    <label for="review">Review</label><br>
+    <input type="text" id="review" name="review"><br>
+    <button onclick="myFunction(document.getElementById('review').value)">Show Answer</button>
+    <p id="deal"></p>
+
+    <script>
+        function myFunction(question) {
+        fetch(`/api/gpt?review=${question}`).then(function (response)
+        {
+        return response.json();
+        } ).then(function (data) {
+        document.getElementById("deal").innerHTML= data;
+        console.log(data);
+        }).catch(function (err) {
+        console.log(`Fetch Error : -S`, err);
+        });
+        }
+
+
+    </script>
+</body>
+</html>

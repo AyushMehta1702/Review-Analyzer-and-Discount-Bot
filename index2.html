@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Analyser Bot</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #header {
+            text-align: center;
+            color: #008080; /* Dark Teal */
+            padding: 50px 0;
+            background-image: url('background.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 2;
+        }
+
+        #main-content {
+            margin: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #008080; /* Dark Teal */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005656; /* Slightly darker teal on hover */
+        }
+
+        #deal {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #008080; /* Dark Teal */
+        }
+
+        /* Floating Animation */
+        .floating {
+            animation: floating 2s infinite ease-in-out;
+        }
+
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="floating">Review Analyser Bot</h1>
+    </div>
+    <div id="main-content">
+        <p>Thanks for shopping with us, let us know your experience!</p>
+        <label for="review">Review</label>
+        <input type="text" id="review" name="review">
+        <button onclick="myFunction(document.getElementById('review').value)">Show Answer</button>
+        <p id="deal"></p>
+    </div>
+
+    <script>
+        function myFunction(question) {
+            fetch(`/api/gpt?review=${question}`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    document.getElementById("deal").innerHTML = data;
+                })
+                .catch(function (err) {
+                    console.log('Fetch Error: ', err);
+                });
+        }
+    </script>
+</body>
+</html>
