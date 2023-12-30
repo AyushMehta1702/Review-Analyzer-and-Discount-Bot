@@ -35,13 +35,13 @@ To get started with the Review Analyser & Discount Bot, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/AyushMehta1702/Discount-Bot.git
+    git clone https://github.com/AyushMehta1702/Review-Analyzer-and-Discount-Bot.git
     ```
 
 2. Install dependencies:
 
     ```bash
-    cd Discount-Bot
+    cd Review-Analyzer-and-Discount-Bot
     pip install -r requirements.txt
     ```
 
